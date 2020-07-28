@@ -3,4 +3,5 @@
 *.jpeg
 *.icloud
 __pycache
-ipynb_checkpoints
+.ipynb_checkpoints
+.DS_Store
