@@ -2,3 +2,5 @@
 *.stan
 *.jpeg
 *.icloud
+__pycache
+ipynb_checkpoints
