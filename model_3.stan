@@ -3,26 +3,23 @@ data {
     int N; // amount of projects
     int n[N]; //projects 
 
-    vector [N] g; // goal
-    vector [N] s; // backers
+    vector [N] p; // pledged
     int y[N]; // success
 }
 
 parameters {
     real a;
-    real b;
-    real c;
+    real d;
 }
 
 model {
-    b ~ normal(1,10);
-    c ~ normal(-0.5,5);
-    y ~ binomial_logit(N, a + b*s + c*g);
+    d ~ normal(1,5);
+    y ~ binomial_logit(N, a + d*p);
 }
 
 generated quantities {
   vector[N] log_lik;
   for (i in 1:N) {
-    log_lik[i] = binomial_logit_lpmf(y[i] | n[i], a + b*s[i] + c*g[i]);
+    log_lik[i] = binomial_logit_lpmf(y[i] | n[i], a + d*p[i]);
   }
 }

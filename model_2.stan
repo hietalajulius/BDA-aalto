@@ -13,7 +13,7 @@ parameters {
 }
 
 model {
-    c ~ normal(-0.5,5);
+    c ~ normal(-1,5);
     y ~ binomial_logit(N, a + c*g);
 }
 
