@@ -1,12 +1,4 @@
 *.csv
-model_1.stan
-model_2.stan
-model_3.stan
-model_4.stan
-model2.stan
-shirt2.jpeg
-.ipynb_checkpoints
-__pycache
-.projects.csv.icloud
-anonshirt.jpeg
+*.stan
+*.jpeg
 *.icloud
